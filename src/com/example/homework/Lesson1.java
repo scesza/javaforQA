@@ -35,7 +35,6 @@ public class Lesson1 {
 
         /*replace b with $ in array*/
         char[] updatedArray = replaceEl(globArray);
-        git
     }
 
     private static void printString(String str) {
