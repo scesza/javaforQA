@@ -6,6 +6,7 @@ public class Lesson1 {
         String text2 = "Unlock full potential. Celebrate positive moments.";
         String text3 = "Every day.";
         char[] globArray = {'G','l','o','b','o','f','o','r','c','e'};
+        String[] globArray2 = {"G","l","o","b","o","f","o","r","c","e"};
 
 
         /* a) print out in console */
@@ -27,26 +28,35 @@ public class Lesson1 {
         printString(text3.replace("e", "E"));
 
         /*вывести размер массива*/
-        printString("Array length is " +  globArray.length);
+        printString("Array of cahrs length is " +  globArray.length);
+        printString("Array of strings length is " +  globArray2.length);
 
         /* replace b with $ transform to string*/
         String globoString = new String(globArray);
         printString(globoString.replace("b","$"));
 
         /*replace b with $ in array*/
-        char[] updatedArray = replaceEl(globArray);
+        char[] updatedArray;
+        updatedArray = replaceEl(globArray);
     }
 
     private static void printString(String str) {
         System.out.println(str);
     }
 
+    /**
+     * @param str should be a String
+     *
+     */
     private static void typeStringLength(String str) {
         int len = str.length();
         String humanStr = "String length is " + len;
         printString(humanStr);
     }
-
+    /**
+     * @param arr should be an Array of chars
+     *
+     */
     private static char[] replaceEl(char[] arr){
         char target = 'b';
         for( int i=0; i<arr.length; i++) {
@@ -57,5 +67,4 @@ public class Lesson1 {
         }
         return arr;
     }
-
 }
