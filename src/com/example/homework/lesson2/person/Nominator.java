@@ -10,10 +10,9 @@ public class Nominator {
             this.lastName = lastName;
         }
 
-        public Object nominate(Object nominee, Object award) {
+        public void nominate(Nominee nominee, Award award) {
 
-            System.out.println(nominee.firstName + " "
-                    + nominee.lastName + " received ");
+            System.out.println(nominee.getFirstName() + " " + nominee.getLastName() + " received ");
             nominee.receiveAward(award);
         }
 }

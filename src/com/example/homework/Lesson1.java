@@ -48,7 +48,7 @@ public class Lesson1 {
         printString(updatedArrayString);
 
         //split string to array of strings
-        String[] testStr = text2.split("\\d*");
+        String[] testStr = text2.split("\\.*");
         System.out.println(testStr.length);
     }
 

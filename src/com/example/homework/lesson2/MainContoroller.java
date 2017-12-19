@@ -4,8 +4,9 @@ import com.example.homework.lesson2.award.Award;
 import com.example.homework.lesson2.person.Nominator;
 import com.example.homework.lesson2.person.Nominee;
 
-public class Controller {
-    public static void main(Object args){
+public class MainContoroller {
+    public static void main(String[] args) {
+       System.out.println(args.length);
        Award popularAward = new Award("Call out!", 50, "USD");
        Award modestAward = new Award("Thank you!", 0, "");
        Award wantedAward = new Award("Super Star!", 500, "EUR");

@@ -17,10 +17,8 @@ public class Nominee {
         return  lastName;
     }
 
-    public static void receiveAward(Object awardInstance){
-        int value = awardInstance.getAwardValue();
-        String name = awardInstance.getAwardName();
-        String curr = awardInstance.getAwardCurrency();
-        System.out.println(name + " award " + curr + " " + value);
+    public static void receiveAward(Award awardInstance) {
+        System.out.println(awardInstance.getAwardName() + " award " + awardInstance.getAwardCurrency() +
+                " " + awardInstance.getAwardValue());
     }
 }
