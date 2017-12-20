@@ -11,6 +11,8 @@ public class MainContoroller {
        Award modestAward = new Award("Thank you!", 0, "");
        Award wantedAward = new Award("Super Star!", 500, "EUR");
 
+       Award smallAward = new Award("Super Star!", 500, "EUR", 0.25);
+
        Nominee person1 = new Nominee ("Arya", "Stark");
        Nominee person2 = new Nominee ("John", "Snow");
        Nominee person3 = new Nominee ("Daenerys", "Targaryen");
@@ -18,7 +20,7 @@ public class MainContoroller {
        Nominator person4 = new Nominator("Sansa", "Stark");
        Nominator person5 = new Nominator("Cersei", "Lannister");
 
-       person4.nominate(person2, popularAward);
+       person4.nominate(person2, smallAward);
        person5.nominate(person1, modestAward);
        person4.nominate(person3, wantedAward);
     }

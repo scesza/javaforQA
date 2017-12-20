@@ -8,7 +8,6 @@ public class Lesson1 {
         char[] globArray = {'G','l','o','b','o','f','o','r','c','e'};
         String[] globArray2 = {"G","l","o","b","o","f","o","r","c","e"};
 
-
         /* a) print out in console */
         printString(text1);
         printString(text2);

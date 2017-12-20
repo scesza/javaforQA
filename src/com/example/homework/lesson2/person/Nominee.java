@@ -13,12 +13,25 @@ public class Nominee {
     public String getFirstName() {
         return  firstName;
     }
+
     public String getLastName() {
         return  lastName;
     }
 
     public static void receiveAward(Award awardInstance) {
+        int originalAwardValue = awardInstance.getAwardValue();
+        double soliCoeficient = awardInstance.getAwardSoli();
+        String valueMessage;
+        if (soliCoeficient != 0) {
+            double updatedAwardValue = originalAwardValue*soliCoeficient;
+            double saldo = -(1 - soliCoeficient)*100;
+            valueMessage = updatedAwardValue + " (soli " + awardInstance.getAwardSoli() +
+                    " applied, initial award value was " + originalAwardValue + ", value changed on " + saldo + "%)";
+
+        } else {
+            valueMessage = originalAwardValue + " (no soli applied)";
+        }
         System.out.println(awardInstance.getAwardName() + " award " + awardInstance.getAwardCurrency() +
-                " " + awardInstance.getAwardValue());
+                " " + valueMessage);
     }
 }
