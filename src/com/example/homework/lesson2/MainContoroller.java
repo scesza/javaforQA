@@ -6,12 +6,13 @@ import com.example.homework.lesson2.person.Nominee;
 
 public class MainContoroller {
     public static void main(String[] args) {
-       System.out.println(args.length);
+
        Award popularAward = new Award("Call out!", 50, "USD");
        Award modestAward = new Award("Thank you!", 0, "");
-       Award wantedAward = new Award("Super Star!", 500, "EUR");
+       Award wantedAward = new Award("Super Star!", 1000, "EUR");
 
-       Award smallAward = new Award("Super Star!", 500, "EUR", 0.25);
+       Award smallAward = new Award("Star!", 500, "EUR", 0.25);
+       Award winnersAward = new Award("Rock Babe!", 500, "EUR", 2.25);
 
        Nominee person1 = new Nominee ("Arya", "Stark");
        Nominee person2 = new Nominee ("John", "Snow");
@@ -21,7 +22,17 @@ public class MainContoroller {
        Nominator person5 = new Nominator("Cersei", "Lannister");
 
        person4.nominate(person2, smallAward);
-       person5.nominate(person1, modestAward);
+       person4.nominate(person2, popularAward);
+       person5.nominate(person2, winnersAward);
+
+       person5.nominate(person1, winnersAward);
+       person4.nominate(person1, smallAward);
+       person4.nominate(person1, modestAward);
+
+       person5.nominate(person3, winnersAward);
        person4.nominate(person3, wantedAward);
+       person4.nominate(person3, popularAward);
+
+
     }
 }

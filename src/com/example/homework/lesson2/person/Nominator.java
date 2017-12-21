@@ -11,7 +11,7 @@ public class Nominator {
         }
 
         public void nominate(Nominee nominee, Award award) {
-            System.out.println(nominee.getFirstName() + " " + nominee.getLastName() + " received ");
+            System.out.print(nominee.getFirstName() + " " + nominee.getLastName() + " received ");
             nominee.receiveAward(award);
         }
 }
