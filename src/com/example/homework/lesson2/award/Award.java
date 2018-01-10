@@ -4,7 +4,8 @@ public class Award {
     private final int aValue;
     private final String currency;
     private final String aName;
-    private  double aSoli ;
+    private Double aSoli;
+    private double quantity;
 
     public Award(String aName, int aValue, String currency, double soli) {
         this.aValue = aValue;
@@ -35,7 +36,15 @@ public class Award {
         this.aSoli = soli;
     }
 
-    public double getAwardSoli() {
+    public Double getAwardSoli() {
         return aSoli;
+    }
+
+    public void setAwardQuantity(double quantity) {
+        this.quantity = quantity;
+    }
+
+    public double getAwardQuantity() {
+        return quantity;
     }
 }
