@@ -1,14 +1,13 @@
 package com.example.homework.lesson2.person;
 import com.example.homework.lesson2.award.Award;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 
 public class Nominee {
     private String firstName;
     private String lastName;
     private List<Award> awards = new ArrayList<>();
+    private Map<String, Double> hashMap = new HashMap<>();
 
     public Nominee(String firstName, String lastName) {
         this.firstName =  firstName;
@@ -63,10 +62,10 @@ public class Nominee {
         return population;
     }
 
-    public void printAwardsQuantity () {
+    public void mapAwardsQuantity() {
         for (Award currentAward : getAwardsList()) {
             if ( currentAward.getAwardSoli() == null ) {
-                System.out.println(countQuantity(currentAward));
+                hashMap.put(currentAward.getAwardName(), countQuantity(currentAward));
             }
         }
     }

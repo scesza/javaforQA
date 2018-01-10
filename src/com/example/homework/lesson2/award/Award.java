@@ -5,7 +5,6 @@ public class Award {
     private final String currency;
     private final String aName;
     private Double aSoli;
-    private double quantity;
 
     public Award(String aName, int aValue, String currency, double soli) {
         this.aValue = aValue;
@@ -40,11 +39,4 @@ public class Award {
         return aSoli;
     }
 
-    public void setAwardQuantity(double quantity) {
-        this.quantity = quantity;
-    }
-
-    public double getAwardQuantity() {
-        return quantity;
-    }
 }

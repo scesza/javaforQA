@@ -37,9 +37,9 @@ public class MainContoroller {
        person4.nominate(person3, wantedAward);
        person4.nominate(person3, popularAward);
 
-       person1.printAwardsQuantity();
-       person2.printAwardsQuantity();
-       person3.printAwardsQuantity();
+       person1.mapAwardsQuantity();
+       person2.mapAwardsQuantity();
+       person3.mapAwardsQuantity();
 
-    }
+}
 }
