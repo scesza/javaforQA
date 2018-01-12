@@ -72,12 +72,12 @@ public class Nominee {
 
     public double countQuantity(Award receivedAward) {
         Random randomGenerator = new Random(100);
-        double C = randomGenerator.nextDouble();
+        double c = randomGenerator.nextDouble();
         int population =  getAwardsPopulation();
-        int Z = randomGenerator.nextInt(100);
-        int P = receivedAward.getAwardValue();
+        int z = randomGenerator.nextInt(100);
+        int p = receivedAward.getAwardValue();
 
-        double part1 = (Math.pow(Z,2)*(P)*(1 - P))/(Math.pow(C,2));
+        double part1 = (Math.pow(z,2)*(p)*(1 - p))/(Math.pow(c,2));
         double part2 =  1 + ((part1 - 1)/population);
         double quantity = part1/part2;
 
