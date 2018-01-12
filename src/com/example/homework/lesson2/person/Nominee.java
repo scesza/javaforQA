@@ -7,7 +7,7 @@ public class Nominee {
     private String firstName;
     private String lastName;
     private List<Award> awards = new ArrayList<>();
-    private Map<String, Double> hashMap = new HashMap<>();
+    public Map<String, Double> hashMap = new HashMap<>();
 
     public Nominee(String firstName, String lastName) {
         this.firstName =  firstName;
