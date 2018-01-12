@@ -44,8 +44,10 @@ public class MainContoroller {
 
        System.out.println(person1.hashMap.get(smallAward.getAwardName()));
        Double person1Awrd1Q = person1.hashMap.get(smallAward.getAwardName());
+
        System.out.println(person2.hashMap.get(modestAward.getAwardName()));
        Double person2Awrd1Q = person2.hashMap.get(modestAward.getAwardName());
+
             //операцию(>, >=, ==, !=, <=, <, &&, ||,!). С комментарием что именно вы хотите отобразить и валидным
        if (person1Awrd1Q == null) {
            System.out.println(person1.getFirstName() + "'s" + " award " + smallAward.getAwardName() + " has soli ");

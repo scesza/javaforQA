@@ -50,7 +50,7 @@ public class Nominee {
         return awards;
     }
 
-    //count number awards without soli
+    //count number person's awards without soli
     public int getAwardsPopulation() {
         int population = 0;
         for (Award currentAward : getAwardsList()) {
@@ -62,20 +62,21 @@ public class Nominee {
         return population;
     }
 
+    //map person's award by name with it's quantity
     public void mapAwardsQuantity() {
         for (Award currentAward : getAwardsList()) {
             if ( currentAward.getAwardSoli() == null ) {
-                hashMap.put(currentAward.getAwardName(), countQuantity(currentAward));
+                hashMap.put(currentAward.getAwardName(), countQuantity(currentAward.getAwardValue()));
             }
         }
     }
 
-    public double countQuantity(Award receivedAward) {
+    public double countQuantity(int receivedAwardValue) {
         Random randomGenerator = new Random(100);
         double c = randomGenerator.nextDouble();
         int population =  getAwardsPopulation();
         int z = randomGenerator.nextInt(100);
-        int p = receivedAward.getAwardValue();
+        int p = receivedAwardValue;
 
         double part1 = (Math.pow(z,2)*(p)*(1 - p))/(Math.pow(c,2));
         double part2 =  1 + ((part1 - 1)/population);
@@ -83,6 +84,5 @@ public class Nominee {
 
         return quantity;
     }
-
 
 }
