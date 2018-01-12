@@ -4,10 +4,6 @@ import com.example.homework.lesson2.award.Award;
 import com.example.homework.lesson2.person.Nominator;
 import com.example.homework.lesson2.person.Nominee;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
-
 public class MainContoroller {
     public static void main(String[] args) {
 
@@ -37,7 +33,7 @@ public class MainContoroller {
        person4.nominate(person3, wantedAward);
        person4.nominate(person3, popularAward);
 
-       //count quantity for each award without soli
+       //for each nominee count quantity for each award without soli
        person1.mapAwardsQuantity();
        person2.mapAwardsQuantity();
        person3.mapAwardsQuantity();
